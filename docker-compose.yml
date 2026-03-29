@@ -1,0 +1,17 @@
+services:
+  web:
+    build: .
+    container_name: undangan-nikah-ghulam-backend
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    networks:
+      - undangan-nikah-ghulam-network
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+networks:
+  undangan-nikah-ghulam-network:
+    external: true
