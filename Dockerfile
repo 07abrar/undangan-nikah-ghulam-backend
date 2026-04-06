@@ -8,7 +8,6 @@ RUN pip install poetry==2.3.2 \
     && poetry config virtualenvs.create false
 COPY pyproject.toml poetry.lock ./
 RUN poetry install --no-root --no-interaction --no-ansi
-COPY . .
 
 EXPOSE 8000
 
